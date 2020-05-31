@@ -3,9 +3,7 @@ package com.reason.gsny.entity;
 import lombok.Data;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
@@ -41,6 +39,7 @@ public class SysUser implements Serializable {
     /**
      * 用户角色
      */
+    @OneToMany(targetEntity=SysRole.class, fetch= FetchType.EAGER)
     private List<SysRole> roleList;
 
     public SysUser() {

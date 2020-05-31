@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>Login page</h1>
+<!--/*@thymesVar id="loginError" type="boolean"*/-->
 <p th:if="${loginError}" class="error">用户名或密码错误</p>
 <form th:action="@{/login.html}" method="post">
     <label for="username">Username</label>:

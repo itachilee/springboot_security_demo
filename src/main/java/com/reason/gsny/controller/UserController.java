@@ -1,7 +1,8 @@
 package com.reason.gsny.controller;
 
-import com.cjs.example.entity.SysUser;
-import com.cjs.example.service.UserService;
+
+import com.reason.gsny.entity.SysUser;
+import com.reason.gsny.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;

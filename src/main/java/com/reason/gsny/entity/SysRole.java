@@ -3,9 +3,7 @@ package com.reason.gsny.entity;
 import lombok.Data;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
@@ -31,6 +29,7 @@ public class SysRole implements Serializable {
     /**
      * 角色拥有的权限
      */
+    @OneToMany(targetEntity=SysPermission.class, fetch= FetchType.EAGER)
     private List<SysPermission> permissionList;
 
     public SysRole() {

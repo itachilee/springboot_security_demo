@@ -2,10 +2,17 @@ package com.reason.gsny.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
+import lombok.extern.log4j.Log4j;
 
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * @author leon
+ */
+@Data
+@Log4j
 public class User implements Serializable {
     private static final long serialVersionUID = 6222176558369919436L;
     @JsonProperty("name")
@@ -16,27 +23,5 @@ public class User implements Serializable {
     private Date birthday;
 
 
-    public String getUserName() {
-        return userName;
-    }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
 }

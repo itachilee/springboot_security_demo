@@ -24,15 +24,18 @@ import java.util.Date;
 @Controller
 public class MainController {
     private static final Logger LOGGER = LoggerFactory.getLogger(MainController.class);
-    @Controller
-    public class ThymeleafController {
-
-        @RequestMapping(value = "show", method = RequestMethod.GET)
-        public String show(Model model){
-            model.addAttribute("uid","123456789");
-            model.addAttribute("name","Jerry");
-            return "index";
-        }
+//    @Controller
+//    public class ThymeleafController {
+//
+//
+//    }
+    @Autowired
+    ObjectMapper mapper;
+    @RequestMapping(value = "show", method = RequestMethod.GET)
+    public String show(Model model){
+        model.addAttribute("uid","123456789");
+        model.addAttribute("name","Jerry");
+        return "index";
     }
     @GetMapping("/admin")
     public String admin() {
@@ -50,8 +53,7 @@ public class MainController {
         user.setBirthday(new Date());
         return user;
     }
-    @Autowired
-    ObjectMapper mapper;
+
 
     /**
      * 序列化

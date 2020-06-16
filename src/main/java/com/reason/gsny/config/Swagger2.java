@@ -1,4 +1,4 @@
-package com.reason.gsny.util;
+package com.reason.gsny.config;
 
 import com.google.common.collect.Sets;
 import org.springframework.context.annotation.Bean;
@@ -14,6 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * api 文档与测试
  * 访问地址为： http://ip:port/swagger-ui.html
+ * @author leon
  */
 @Configuration
 @EnableSwagger2
@@ -24,7 +25,7 @@ public class Swagger2 {
                 .protocols(Sets.newHashSet("http")) //协议，http或https
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.easement.mes.api")) //一定要写对，会在这个路径下扫描controller定义
+                .apis(RequestHandlerSelectors.basePackage("com.reason.gsny")) //一定要写对，会在这个路径下扫描controller定义
                 .paths(PathSelectors.any())
                 .build();
     }

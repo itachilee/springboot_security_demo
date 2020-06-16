@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>阀控器信息</title>
+<!--    <link rel="stylesheet" href="css/bulma.min.css" />-->
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/css/bootstrap-grid.css" />
+<!--    <link rel="stylesheet" href="css/bootstrap.css" />-->
+<!--    <link rel="stylesheet" type="text/css" href="css/admin.css">-->
+</head>
+<body>
+
+<div>
+    <nav class="navbar" role="navigation" aria-label="main navigation" >
+
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start" >
+                <a class="navbar-item" href="/gprs">
+                    集中器信息
+                </a>
+                <a class="navbar-item" href="/orders">
+                    命令信息
+                </a>
+            </div>
+
+
+        </div>
+    </nav>
+</div>
+<div class="table-container">
+    <table class="table text-nowrap" style="table-layout: fixed;" border="1" width="100%" cellspacing="" cellpadding="">
+        <td>
+            <tr>
+                <th>阀控器主键</th>
+                <th>阀控器编号</th>
+                <th>阀控器口径</th>
+<!--                <th>集中器主键</th>-->
+<!--                <th>通讯方式</th>-->
+                <th>创建时间</th>
+<!--                <th>使用时间</th>-->
+<!--                <th>状态</th>-->
+<!--                <th>压力</th>-->
+<!--                <th>流速</th>-->
+<!--                <th>总量</th>-->
+<!--                <th>电压</th>-->
+                <th>阀门状态</th>
+                <th>操作</th>
+            </tr>
+            <tr  th:each="info,infoStat : ${lists}" >
+                <!--            <td th:text="${a}"></td>-->
+                <th th:text="${info.meterIDid}"></th>
+                <th th:text="${info.meterID}"></th>
+                <th th:text="${info.meterSize}"></th>
+<!--                <th th:text="${info.imeiId}"></th>-->
+                <th th:text="${info.createTime}"></th>
+<!--                <th th:text="${info.comunicateModeId}"></th>-->
+<!--                <th th:text="${info.useTime}"></th>-->
+<!--                <th th:text="${info.status}"></th>-->
+<!--                <th th:text="${info.pressure}"></th>-->
+<!--                <th th:text="${info.flowRate}"></th>-->
+<!--                <th th:text="${info.remainTotal}"></th>-->
+<!--                <th th:text="${info.electric}"></th>-->
+                <th th:text="${info.valveStatus}"></th>
+                <td><a th:href="@{/openMeter(id=${info.meterIDid})}">开泵</a> ||
+                    <a th:href="@{/closeMeter(id=${info.meterIDid})}">关泵</a></td>
+<!--                <td></td>-->
+                <!--            <th th:text="${infoStat.index}"></th>-->
+                <!--            <th th:text="${infoStat.count}"></th>-->
+                <!--            <th th:text="${infoStat.size}"></th>-->
+                <!--            <th th:text="${infoStat.even}"></th>-->
+                <!--            <th th:text="${infoStat.odd}"></th>-->
+                <!--            <th th:text="${infoStat.first}"></th>-->
+                <!--            <th th:text="${infoStat.last}"></th>-->
+            </tr>
+        </td>
+    </table>
+</div>
+
+<div>
+    <footer class="footer" th:fragment="companyInfo">
+        <div class="content has-text-centered">
+            <p>
+                <strong>©瑞臻信息技术(深圳)有限公司</strong>
+            </p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>命令监控</title>
+<!--    <link rel="stylesheet" href="css/bulma.min.css" />-->
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/css/bootstrap-grid.css" />
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+</head>
+<body>
+<div>
+    <nav class="navbar" role="navigation" aria-label="main navigation" th:fragment="nav">
+
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start" >
+                <a class="navbar-item" href="/gprs">
+                    集中器信息
+                </a>
+
+                <a class="navbar-item" href="/orders">
+                    命令信息
+                </a>
+
+
+            </div>
+
+
+        </div>
+    </nav>
+</div>
+<div class="container table-responsive">
+    <table class="table text-nowrap" style="table-layout: fixed;" border="1" width="100%" cellspacing="" cellpadding="">
+        <td>
+            <tr>
+                <th>命令序号</th>
+                <th>集中器编号</th>
+                <th>阀控器编号</th>
+                <th>生成时间</th>
+                <th>命令状态标志</th>
+                <th>命令代码</th>
+                <th>命令名称</th>
+                <th>备注</th>
+                <th>状态</th>
+                <th>发送时间</th>
+<!--                <th>集中器地址</th>-->
+<!--                <th>集中器服务</th>-->
+<!--                <th>创建时间</th>-->
+<!--                <th>包含阀控器</th>-->
+            </tr>
+            <tr  th:each="info,infoStat : ${lists}" >
+                <!--            <td th:text="${a}"></td>-->
+                <th th:text="${info.sendId}"></th>
+                <th th:text="${info.imei}"></th>
+                <th th:text="${info.meterId}"></th>
+                <th th:text="${info.genTime}"></th>
+                <th th:text="${info.isOver}"></th>
+                <th th:text="${info.cmdCode}"></th>
+                <th th:text="${info.cmdName}"></th>
+                <th th:text="${info.note}"></th>
+                <th th:text="${info.status}"></th>
+<!--                <th th:text="${info.operator}"></th>-->
+<!--                <th th:text="${info.tryTimes}"></th>-->
+                <th th:text="${info.sendedTime}"></th>
+<!--                <th th:text="${info.openPoint}"></th>-->
+<!--                <th th:text="${info.userid}"></th>-->
+                <!--            <th th:text="${infoStat.index}"></th>-->
+                <!--            <th th:text="${infoStat.count}"></th>-->
+                <!--            <th th:text="${infoStat.size}"></th>-->
+                <!--            <th th:text="${infoStat.even}"></th>-->
+                <!--            <th th:text="${infoStat.odd}"></th>-->
+                <!--            <th th:text="${infoStat.first}"></th>-->
+                <!--            <th th:text="${infoStat.last}"></th>-->
+            </tr>
+
+        </td>
+    </table>
+    <div>
+        <footer class="footer" th:fragment="companyInfo">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>©瑞臻信息技术(深圳)有限公司</strong>
+                </p>
+            </div>
+        </footer>
+    </div>
+</div>
+</body>
+</html>

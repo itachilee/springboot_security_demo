@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>命令监控</title>
+    <!--    <link rel="stylesheet" href="css/bulma.min.css" />-->
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/css/bootstrap-grid.css" />
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+</head>
+<body>
+<div>
+    <nav class="navbar" role="navigation" aria-label="main navigation" th:fragment="nav">
+
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start" >
+                <a class="navbar-item" href="/gprs">
+                    集中器信息
+                </a>
+
+                <a class="navbar-item" href="/orders">
+                    命令信息
+                </a>
+
+
+            </div>
+
+
+        </div>
+    </nav>
+</div>
+<div class="container table-responsive">
+    <table class="table text-nowrap" style="table-layout: fixed;" border="1" width="100%" cellspacing="" cellpadding="">
+        <td>
+            <tr>
+                <th>集中器编号</th>
+                <th>集中器名称</th>
+                <th>集中器登录时间</th>
+                <th>集中器在线时间</th>
+                <th>操作</th>
+            </tr>
+            <tr  th:each="info,infoStat : ${lists}" >
+                <th th:text="${info.imei}"></th>
+                <th th:text="${info.imeiName}"></th>
+                <th th:text="${info.updateTime}"></th>
+                <th th:text="${info.status}"></th>
+                <th><a th:href="@{/showMeters(id=${info.imeiid})}">查看阀控器</a></th>
+            </tr>
+
+        </td>
+    </table>
+    <div>
+        <footer class="footer" >
+            <div class="content has-text-centered">
+                <p>
+                    <strong>©瑞臻信息技术(深圳)有限公司</strong>
+                </p>
+            </div>
+        </footer>
+    </div>
+</div>
+</body>
+</html>

@@ -5,8 +5,10 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
+/**
+ * @author leon
+ */
 @Data
-
 public class TreeEntity {
     private long id;
     private String text;

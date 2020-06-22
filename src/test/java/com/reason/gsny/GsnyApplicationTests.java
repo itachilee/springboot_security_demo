@@ -13,8 +13,8 @@ import java.net.URL;
 import java.nio.file.Paths;
 
 /**
- * 测试生成api文档，需要现启动程序，否则会找不到网址
- * ps: 开启jwt安全验证后需要传递jwt令牌，否则会报403拒绝访问
+ * 訪問本地api地址
+ * 我的端口是1978，故訪問 http://127.0.0.1:1978/v2/api-docs
  * @author leon
  */
 @SpringBootTest
@@ -24,10 +24,10 @@ class GsnyApplicationTests {
     void contextLoads() {
 
     }
-//    /**
-//     * 生成AsciiDocs格式文档
-//     * @throws Exception
-//     */
+    /**
+     * 生成AsciiDocs格式文档
+     * @throws Exception
+     */
 //    @Test
 //    public void generateAsciiDocs() throws Exception {
 //        //    输出Ascii格式

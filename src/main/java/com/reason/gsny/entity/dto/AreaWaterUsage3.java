@@ -7,8 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.io.Serializable;
-
 /**
  * 封装区域每日/月/年用水量与用户充值金额
  * @author leon
@@ -17,15 +15,11 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class AreaWaterUsage implements Serializable {
+public class AreaWaterUsage3 {
     /**
-     * 年
+     * 小时
      */
-    private int year;
-    /**
-     * 月
-     */
-    private int month;
+    private int hour;
     /**
      * 充值金额
      */
@@ -36,11 +30,12 @@ public class AreaWaterUsage implements Serializable {
      */
     @JsonSerialize(using = DoubleSerialize.class)
     private double water_usage;
-
-    public AreaWaterUsage(int date,double cost_amount,double water_usage){
-        this.year=date;
-        this.cost_amount=cost_amount;
-        this.water_usage=water_usage;
-    }
-
+    /**
+     * 区域主键
+     */
+    private String area_guid;
+    /**
+     * 区域名称
+     */
+    private String area_name;
 }

@@ -6,6 +6,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * 静态资源配置
+ * @author leon
  */
 @Configuration
 public class StaticResourceConfiguration implements WebMvcConfigurer {

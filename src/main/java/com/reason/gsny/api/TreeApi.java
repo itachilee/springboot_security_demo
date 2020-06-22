@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author leon
+ */
 @RestController
 @RequestMapping("/api")
 public class TreeApi {
@@ -20,8 +23,6 @@ public class TreeApi {
     @ResponseStatus(HttpStatus.OK)
     public List<TreeEntity> getUserList()
     {
-
-
         TreeEntity tree = new TreeEntity();
         tree.setId(1);
         tree.setText("id1");

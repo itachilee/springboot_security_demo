@@ -1,6 +1,7 @@
 package com.reason.gsny.entity.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,9 +16,22 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class AreaDeviceGroup {
+    /**
+     * 设备数
+     */
     @JsonProperty("value")
-    private long deviceCount;
-    private String deviceType;
+    @ApiModelProperty(value = "设备数", required = true)
+    private long device_count;
+    /**
+     * 设备类型
+     * enum 1:集中器 2:集中器 3:阀控器 4:水表
+     */
+    @ApiModelProperty(value = "设备类型* enum 1:集中器 2:集中器 3:阀控器 4:水表", required = true)
+    private long device_type;
+    /**
+     * 设备名称
+     */
     @JsonProperty("name")
-    private String deviceName;
+    @ApiModelProperty(value = "设备名称", required = true)
+    private String device_name;
 }

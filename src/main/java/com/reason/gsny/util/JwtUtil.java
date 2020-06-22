@@ -19,7 +19,7 @@ import java.util.function.Function;
 @Service
 public class JwtUtil {
 
-    private String SECRET_KEY = "secret";
+    private String SECRET_KEY = "上杉erii";
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
@@ -41,18 +41,37 @@ public class JwtUtil {
         return extractExpiration(token).before(new Date());
     }
 
+    /**
+     * 调用createToken 生成令牌
+     * @param userDetails
+     * @return 返回jwt令牌字串
+     */
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
         return createToken(claims, userDetails.getUsername());
     }
 
+    /**
+     * 创建jwt令牌
+     * @param claims
+     * @param subject
+     * @return
+     */
     private String createToken(Map<String, Object> claims, String subject) {
 
         return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
+                // 令牌过期时间
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))
+                // 签名
                 .signWith(SignatureAlgorithm.HS256, SECRET_KEY).compact();
     }
 
+    /**
+     * 验证令牌
+     * @param token
+     * @param userDetails
+     * @return
+     */
     public Boolean validateToken(String token, UserDetails userDetails) {
         final String username = extractUsername(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));

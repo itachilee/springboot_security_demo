@@ -18,13 +18,11 @@ import java.text.SimpleDateFormat;
 import java.util.Optional;
 
 /**
+ * 排除更新值为null的字段
  * @date 2020/6/12
  * @author leon
  */
 @SpringBootApplication
-// 开启swagger api文档
-@EnableSwagger2
-// 排除更新值为null的字段
 @EnableJpaRepositories( value = "com.reason.gsny.repository",repositoryBaseClass = SimpleJpaRepositoryImpl.class)
 public class Main {
 
@@ -32,13 +30,11 @@ public class Main {
         SpringApplication.run(Main.class, args);
     }
 
-    @Bean
-    public ObjectMapper objectMapper() {
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
-        return new ObjectMapper().disable(SerializationFeature.FAIL_ON_EMPTY_BEANS);
-    }
 
+
+    /**
+     * 審計字段實現自動寫入當前用戶的id
+     */
     @Component
     public  class AuditorAwareSecurityImpl implements AuditorAware<Long> {
         @Override

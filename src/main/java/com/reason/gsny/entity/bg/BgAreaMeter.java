@@ -8,17 +8,21 @@ import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
 
+
+/**
+ * @author leon
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name = "bg_area_device", schema = "dbo")
-public class BgAreaDevice extends AbstractAuditable {
-
+@Table(name = "bg_area_meter", schema = "dbo")
+public class BgAreaMeter extends AbstractAuditable implements Serializable {
     private String area_guid;
     private String area_name;
-    private String device;
-    private long device_type;
+    private long meter_no;
+    private String meter_guid;
 }

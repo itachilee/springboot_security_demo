@@ -14,6 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * api 文档与测试
  * 访问地址为： http://ip:port/swagger-ui.html
+ * @EnableSwagger2 开启swagger api文档
  * @author leon
  */
 @Configuration
@@ -22,10 +23,12 @@ public class Swagger2 {
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .protocols(Sets.newHashSet("http")) //协议，http或https
+                //协议，http或https
+                .protocols(Sets.newHashSet("http"))
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.reason.gsny")) //一定要写对，会在这个路径下扫描controller定义
+                //一定要写对，会在这个路径下扫描controller定义
+                .apis(RequestHandlerSelectors.basePackage("com.reason.gsny"))
                 .paths(PathSelectors.any())
                 .build();
     }

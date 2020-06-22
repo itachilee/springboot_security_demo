@@ -39,9 +39,5 @@ public class GlobalCorsConfig {
                         .allowCredentials(false).maxAge(3600);
             }
         };
-
-
     }
-
-
 }

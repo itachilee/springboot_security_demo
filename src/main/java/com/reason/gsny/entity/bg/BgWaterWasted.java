@@ -9,9 +9,8 @@ import lombok.ToString;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.io.Serializable;
-
 /**
- * 区域用水量与区域充值金额
+ * 区域已开阀用水量
  * @author leon
  */
 @Data
@@ -19,8 +18,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name = "bg_area_water_usage", schema = "dbo")
-public class BgAreaWaterUsage extends AbstractAuditable implements Serializable {
+@Table(name = "bg_water_wasted", schema = "dbo")
+public class BgWaterWasted extends AbstractAuditable implements Serializable {
     /**
      * 区域主键
      */
@@ -30,21 +29,11 @@ public class BgAreaWaterUsage extends AbstractAuditable implements Serializable 
      */
     private String area_name;
     /**
-     * 区域用水量
+     * 已用水量
      */
-    private double area_water_usage;
+    private double used_water;
     /**
-     * 月份
-     */
-    private int month;
-    /**
-     * 区域充值金额
+     * 总充值水量
      */
     private double cost_amount;
-
-    private BgAreaWaterUsage(String area_guid,String area_name,double area_water_usage){
-        this.area_guid=area_guid;
-        this.area_name=area_name;
-        this.area_water_usage=area_water_usage;
-    }
 }

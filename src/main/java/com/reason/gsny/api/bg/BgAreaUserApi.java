@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * @author leon
+ */
 @RestController
 @RequestMapping("/api/bg")
 public class BgAreaUserApi {

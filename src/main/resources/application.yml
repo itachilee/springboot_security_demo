@@ -1,7 +1,7 @@
 spring:
   profiles:
     active: dev
-#    falyway 不再支持sqlserver2008r2版
+#    falyway 不再支持sqlserver2008r2版，生产环境记得关掉
 #  flyway:
 #    enabled: true
 #    # 禁止清理数据库表
@@ -12,19 +12,20 @@ spring:
 #    baseline-version: 0
 #    locations:
 #      - classpath:db/migration
-  ##jwt配置
-  audience:
-    # 代表这个JWT的接收对象,存入audience
-    clientId: 098f6bcd4621d373cade4e832627b4f6
-    # 密钥, 经过Base64加密, 可自行替换
-    base64Secret: MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY=
-    # JWT的签发主体，存入issuer
-    name: restapiuser
-    # 过期时间，时间戳
-    expiresSecond: 172800
-    cache:false:
+#  ##jwt配置
+#  audience:
+#    # 代表这个JWT的接收对象,存入audience
+#    clientId: 098f6bcd4621d373cade4e832627b4f6
+#    # 密钥, 经过Base64加密, 可自行替换
+#    base64Secret: MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY=
+#    # JWT的签发主体，存入issuer
+#    name: restapiuser
+#    # 过期时间，时间戳
+#    expiresSecond: 172800
+#    cache:false:
   # 设置thtmeleaf 缓存为false
   thymeleaf:
     cache: false
     encoding: utf-8
-
+  logging:
+    config: classpath:logback-spring.xml

@@ -1,14 +1,12 @@
 package com.reason.gsny.repository.impl;
 
 
-//import org.springframework.beans.BeanUtils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.support.JpaEntityInformation;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.transaction.annotation.Transactional;
@@ -71,11 +69,10 @@ public class SimpleJpaRepositoryImpl<T, ID> extends SimpleJpaRepository<T, ID> {
             T target = optionalT.get();
             //2.将非空属性覆盖到最新对象
             BeanUtils.copyProperties(entity, target, nullProperties);
-
 //            BeanUtil.copyProperties(entity,target,true, CopyOptions.create().setIgnoreNullValue(true).setIgnoreError(true));
             //3.更新非空属性
             em.merge(target);
-            log.info("拷贝函数");
+            log.info("拷贝函数,过滤为null的字段");
             return entity;
         }
     }

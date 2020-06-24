@@ -1,0 +1,323 @@
+2020-06-24 23:38:11.860 [restartedMain] INFO  com.reason.gsny.Main - Starting Main on LAPTOP-BBG70CSE with PID 10520 (started by leon in D:\project\svn\甘肃农业灌溉\software\甘肃农业app\gsnyBoot)
+2020-06-24 23:38:11.868 [restartedMain] INFO  com.reason.gsny.Main - The following profiles are active: dev
+2020-06-24 23:38:11.964 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-24 23:38:11.964 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-24 23:38:13.530 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-24 23:38:13.680 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 138ms. Found 11 repository interfaces.
+2020-06-24 23:38:14.712 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9980ee83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:38:14.797 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$322eb6bd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:38:14.808 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:38:14.812 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@37f22d39' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:38:14.819 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$5703596f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:38:14.833 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration' of type [org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration$$EnhancerBySpringCGLIB$$7c587185] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:38:14.837 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jsr250MethodSecurityMetadataSource' of type [org.springframework.security.access.annotation.Jsr250MethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:38:14.840 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:38:16.021 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1978 (http)
+2020-06-24 23:38:16.049 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1978"]
+2020-06-24 23:38:16.066 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-06-24 23:38:16.066 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-06-24 23:38:16.324 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-06-24 23:38:16.324 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4359 ms
+2020-06-24 23:38:16.963 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-06-24 23:38:17.838 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-24 23:38:17.964 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-06-24 23:38:17.966 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-06-24 23:38:18.234 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-06-24 23:38:18.609 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2020-06-24 23:38:29.495 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-24 23:38:29.587 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-06-24 23:38:30.787 [restartedMain] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-06-24 23:38:31.988 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+2020-06-24 23:38:32.108 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@651e92bf, org.springframework.security.web.context.SecurityContextPersistenceFilter@d2dc650, org.springframework.security.web.header.HeaderWriterFilter@deca120, org.springframework.security.web.csrf.CsrfFilter@c6e2cb6, org.springframework.security.web.authentication.logout.LogoutFilter@364bfc69, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@748ebe37, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d6a8963, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@260f69a3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@312354ee, org.springframework.security.web.session.SessionManagementFilter@4ab5e26d, org.springframework.security.web.access.ExceptionTranslationFilter@26ff6067, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3ea5d1f9]
+2020-06-24 23:38:32.151 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-06-24 23:38:32.358 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-24 23:38:32.621 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-06-24 23:38:32.951 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-06-24 23:38:32.978 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-06-24 23:38:33.019 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-06-24 23:38:33.270 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findUserGroupByAreaUsingGET_1
+2020-06-24 23:38:33.279 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getGprsListUsingGET_1
+2020-06-24 23:38:33.342 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getGprsListUsingGET_2
+2020-06-24 23:38:33.440 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: closeMeterUsingGET_1
+2020-06-24 23:38:33.449 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2020-06-24 23:38:33.450 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: openMeterUsingGET_1
+2020-06-24 23:38:33.453 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: showMetersUsingGET_1
+2020-06-24 23:38:33.469 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListByStatusUsingGET_1
+2020-06-24 23:38:33.477 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListUsingGET_1
+2020-06-24 23:38:33.479 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: jsonUsingGET_1
+2020-06-24 23:38:33.485 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_1
+2020-06-24 23:38:33.517 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1978"]
+2020-06-24 23:38:33.562 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 1978 (http) with context path ''
+2020-06-24 23:38:33.567 [restartedMain] INFO  com.reason.gsny.Main - Started Main in 22.689 seconds (JVM running for 24.201)
+2020-06-24 23:38:44.436 [http-nio-1978-exec-3] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-24 23:38:44.436 [http-nio-1978-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-06-24 23:38:44.455 [http-nio-1978-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2020-06-24 23:40:49.544 [Thread-51] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-24 23:40:49.551 [Thread-51] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-24 23:40:49.560 [Thread-51] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-06-24 23:41:10.789 [restartedMain] INFO  com.reason.gsny.Main - Starting Main on LAPTOP-BBG70CSE with PID 19548 (started by leon in D:\project\svn\甘肃农业灌溉\software\甘肃农业app\gsnyBoot)
+2020-06-24 23:41:10.793 [restartedMain] INFO  com.reason.gsny.Main - The following profiles are active: dev
+2020-06-24 23:41:10.869 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-24 23:41:10.869 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-24 23:41:12.530 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-24 23:41:12.663 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 124ms. Found 11 repository interfaces.
+2020-06-24 23:41:13.369 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fefa6c62] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:41:13.418 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$97a8349c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:41:13.425 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:41:13.428 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@44dc0356' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:41:13.433 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$bc7cd74e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:41:13.443 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration' of type [org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration$$EnhancerBySpringCGLIB$$e1d1ef64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:41:13.446 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jsr250MethodSecurityMetadataSource' of type [org.springframework.security.access.annotation.Jsr250MethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:41:13.448 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:41:14.386 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1978 (http)
+2020-06-24 23:41:14.412 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1978"]
+2020-06-24 23:41:14.428 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-06-24 23:41:14.428 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-06-24 23:41:14.741 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-06-24 23:41:14.742 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3872 ms
+2020-06-24 23:41:15.404 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-06-24 23:41:15.959 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-24 23:41:16.044 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-06-24 23:41:16.046 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-06-24 23:41:16.254 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-06-24 23:41:16.506 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2020-06-24 23:41:22.653 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-24 23:41:22.747 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-06-24 23:41:24.054 [restartedMain] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-06-24 23:41:25.263 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+2020-06-24 23:41:25.318 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@374e101, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f4419c6, org.springframework.security.web.header.HeaderWriterFilter@3f1ea64e, org.springframework.security.web.authentication.logout.LogoutFilter@2f769168, com.reason.gsny.handler.JwtRequestFilter@7908319a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@78f81e3b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4406211b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58ae418f, org.springframework.security.web.session.SessionManagementFilter@18fa5958, org.springframework.security.web.access.ExceptionTranslationFilter@3a5d2d9f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5920236e]
+2020-06-24 23:41:25.355 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-06-24 23:41:25.527 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-24 23:41:25.755 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-06-24 23:41:26.074 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-06-24 23:41:26.108 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-06-24 23:41:26.166 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-06-24 23:41:26.413 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findUserGroupByAreaUsingGET_1
+2020-06-24 23:41:26.421 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getGprsListUsingGET_1
+2020-06-24 23:41:26.481 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getGprsListUsingGET_2
+2020-06-24 23:41:26.570 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: closeMeterUsingGET_1
+2020-06-24 23:41:26.578 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2020-06-24 23:41:26.580 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: openMeterUsingGET_1
+2020-06-24 23:41:26.583 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: showMetersUsingGET_1
+2020-06-24 23:41:26.602 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListByStatusUsingGET_1
+2020-06-24 23:41:26.608 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListUsingGET_1
+2020-06-24 23:41:26.609 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: jsonUsingGET_1
+2020-06-24 23:41:26.615 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_1
+2020-06-24 23:41:26.645 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1978"]
+2020-06-24 23:41:26.683 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 1978 (http) with context path ''
+2020-06-24 23:41:26.688 [restartedMain] INFO  com.reason.gsny.Main - Started Main in 16.842 seconds (JVM running for 18.258)
+2020-06-24 23:42:37.082 [http-nio-1978-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-24 23:42:37.082 [http-nio-1978-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-06-24 23:42:37.177 [http-nio-1978-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 95 ms
+2020-06-24 23:42:37.581 [http-nio-1978-exec-1] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:42:37.770 [http-nio-1978-exec-1] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:43:36.070 [http-nio-1978-exec-3] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:43:36.217 [http-nio-1978-exec-3] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:43:50.104 [http-nio-1978-exec-4] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:43:50.270 [http-nio-1978-exec-4] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:46:04.108 [http-nio-1978-exec-7] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:46:04.481 [http-nio-1978-exec-7] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:46:39.559 [http-nio-1978-exec-8] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:46:47.546 [http-nio-1978-exec-8] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:47:36.425 [http-nio-1978-exec-9] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:47:36.609 [http-nio-1978-exec-9] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:48:14.149 [http-nio-1978-exec-10] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:49:11.694 [http-nio-1978-exec-10] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:49:37.829 [Thread-43] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-24 23:49:37.836 [Thread-43] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-24 23:49:37.846 [Thread-43] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-06-24 23:49:50.894 [restartedMain] INFO  com.reason.gsny.Main - Starting Main on LAPTOP-BBG70CSE with PID 2404 (started by leon in D:\project\svn\甘肃农业灌溉\software\甘肃农业app\gsnyBoot)
+2020-06-24 23:49:50.900 [restartedMain] INFO  com.reason.gsny.Main - The following profiles are active: dev
+2020-06-24 23:49:50.963 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-24 23:49:50.964 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-24 23:49:52.456 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-24 23:49:52.613 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 147ms. Found 11 repository interfaces.
+2020-06-24 23:49:53.479 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e6ef9e15] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:49:53.534 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$7f9d664f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:49:53.541 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:49:53.544 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1e586a33' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:49:53.546 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$a4720901] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:49:53.556 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration' of type [org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration$$EnhancerBySpringCGLIB$$c9c72117] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:49:53.559 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jsr250MethodSecurityMetadataSource' of type [org.springframework.security.access.annotation.Jsr250MethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:49:53.560 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:49:54.310 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1978 (http)
+2020-06-24 23:49:54.327 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1978"]
+2020-06-24 23:49:54.340 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-06-24 23:49:54.340 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-06-24 23:49:54.509 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-06-24 23:49:54.509 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3545 ms
+2020-06-24 23:49:55.029 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-06-24 23:49:55.539 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-24 23:49:55.712 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-06-24 23:49:55.717 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-06-24 23:49:55.906 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-06-24 23:49:56.195 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2020-06-24 23:50:03.526 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-24 23:50:03.661 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-06-24 23:50:05.430 [restartedMain] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-06-24 23:50:06.773 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+2020-06-24 23:50:06.843 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@178fe4c7, org.springframework.security.web.context.SecurityContextPersistenceFilter@4fc7bc7d, org.springframework.security.web.header.HeaderWriterFilter@4a87869e, org.springframework.security.web.authentication.logout.LogoutFilter@e0916e4, com.reason.gsny.handler.JwtRequestFilter@74b1993c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d411d29, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55360661, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7fb17dd3, org.springframework.security.web.session.SessionManagementFilter@3b484a2a, org.springframework.security.web.access.ExceptionTranslationFilter@55507b45, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e80b283]
+2020-06-24 23:50:06.897 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-06-24 23:50:07.161 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-24 23:50:07.443 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-06-24 23:50:07.848 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-06-24 23:50:07.881 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-06-24 23:50:07.937 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-06-24 23:50:08.209 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findUserGroupByAreaUsingGET_1
+2020-06-24 23:50:08.218 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getGprsListUsingGET_1
+2020-06-24 23:50:08.309 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getGprsListUsingGET_2
+2020-06-24 23:50:08.443 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: closeMeterUsingGET_1
+2020-06-24 23:50:08.456 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2020-06-24 23:50:08.459 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: openMeterUsingGET_1
+2020-06-24 23:50:08.462 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: showMetersUsingGET_1
+2020-06-24 23:50:08.484 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListByStatusUsingGET_1
+2020-06-24 23:50:08.494 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListUsingGET_1
+2020-06-24 23:50:08.495 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: jsonUsingGET_1
+2020-06-24 23:50:08.503 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_1
+2020-06-24 23:50:08.538 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1978"]
+2020-06-24 23:50:08.583 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 1978 (http) with context path ''
+2020-06-24 23:50:08.588 [restartedMain] INFO  com.reason.gsny.Main - Started Main in 18.608 seconds (JVM running for 19.913)
+2020-06-24 23:50:12.757 [http-nio-1978-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-24 23:50:12.758 [http-nio-1978-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-06-24 23:50:12.777 [http-nio-1978-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 19 ms
+2020-06-24 23:50:13.149 [http-nio-1978-exec-1] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:50:16.430 [http-nio-1978-exec-1] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:50:49.691 [http-nio-1978-exec-3] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:51:13.459 [http-nio-1978-exec-4] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:51:58.606 [http-nio-1978-exec-5] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:54:48.448 [http-nio-1978-exec-7] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:54:52.484 [http-nio-1978-exec-7] INFO  c.r.gsny.repository.impl.SimpleJpaRepositoryImpl - 拷贝函数
+2020-06-24 23:55:37.413 [http-nio-1978-exec-9] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:55:39.965 [http-nio-1978-exec-9] INFO  c.r.gsny.repository.impl.SimpleJpaRepositoryImpl - 拷贝函数
+2020-06-24 23:56:17.931 [Thread-44] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-24 23:56:17.946 [Thread-44] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-24 23:56:17.965 [Thread-44] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-06-24 23:56:27.637 [restartedMain] INFO  com.reason.gsny.Main - Starting Main on LAPTOP-BBG70CSE with PID 21752 (started by leon in D:\project\svn\甘肃农业灌溉\software\甘肃农业app\gsnyBoot)
+2020-06-24 23:56:27.642 [restartedMain] INFO  com.reason.gsny.Main - The following profiles are active: dev
+2020-06-24 23:56:27.728 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-24 23:56:27.729 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-24 23:56:29.929 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-24 23:56:30.098 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 158ms. Found 11 repository interfaces.
+2020-06-24 23:56:31.311 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d57a5626] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:56:31.375 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$6e281e60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:56:31.382 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:56:31.385 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@9c8c5cc' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:56:31.390 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$92fcc112] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:56:31.403 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration' of type [org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration$$EnhancerBySpringCGLIB$$b851d928] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:56:31.406 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jsr250MethodSecurityMetadataSource' of type [org.springframework.security.access.annotation.Jsr250MethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:56:31.407 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:56:32.807 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1978 (http)
+2020-06-24 23:56:32.836 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1978"]
+2020-06-24 23:56:32.851 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-06-24 23:56:32.851 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-06-24 23:56:33.183 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-06-24 23:56:33.184 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5455 ms
+2020-06-24 23:56:33.817 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-06-24 23:56:34.412 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-24 23:56:34.568 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-06-24 23:56:34.572 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-06-24 23:56:34.872 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-06-24 23:56:35.158 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2020-06-24 23:56:42.059 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-24 23:56:42.139 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-06-24 23:56:43.346 [restartedMain] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-06-24 23:56:44.454 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+2020-06-24 23:56:44.532 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@eb5a1ec, org.springframework.security.web.context.SecurityContextPersistenceFilter@6fc94192, org.springframework.security.web.header.HeaderWriterFilter@5c0a07f9, org.springframework.security.web.authentication.logout.LogoutFilter@61de3384, com.reason.gsny.handler.JwtRequestFilter@3f03283, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71f2d3d2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@383b26c1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ed58130, org.springframework.security.web.session.SessionManagementFilter@10ceb49f, org.springframework.security.web.access.ExceptionTranslationFilter@4257fe87, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67e0fb10]
+2020-06-24 23:56:44.568 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-06-24 23:56:44.799 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-24 23:56:45.017 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-06-24 23:56:45.328 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-06-24 23:56:45.358 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-06-24 23:56:45.406 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-06-24 23:56:45.742 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findUserGroupByAreaUsingGET_1
+2020-06-24 23:56:45.750 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getGprsListUsingGET_1
+2020-06-24 23:56:45.814 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getGprsListUsingGET_2
+2020-06-24 23:56:45.905 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: closeMeterUsingGET_1
+2020-06-24 23:56:45.912 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2020-06-24 23:56:45.913 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: openMeterUsingGET_1
+2020-06-24 23:56:45.915 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: showMetersUsingGET_1
+2020-06-24 23:56:45.929 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListByStatusUsingGET_1
+2020-06-24 23:56:45.936 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListUsingGET_1
+2020-06-24 23:56:45.937 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: jsonUsingGET_1
+2020-06-24 23:56:45.942 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_1
+2020-06-24 23:56:45.969 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1978"]
+2020-06-24 23:56:46.002 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 1978 (http) with context path ''
+2020-06-24 23:56:46.006 [restartedMain] INFO  com.reason.gsny.Main - Started Main in 19.352 seconds (JVM running for 20.957)
+2020-06-24 23:56:52.439 [http-nio-1978-exec-3] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-24 23:56:52.440 [http-nio-1978-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-06-24 23:56:52.470 [http-nio-1978-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 30 ms
+2020-06-24 23:56:52.627 [http-nio-1978-exec-3] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:56:57.028 [http-nio-1978-exec-3] INFO  c.r.gsny.repository.impl.SimpleJpaRepositoryImpl - 拷贝函数
+2020-06-24 23:57:46.172 [Thread-46] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-24 23:57:46.191 [Thread-46] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-24 23:57:46.224 [Thread-46] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-06-24 23:57:53.659 [restartedMain] INFO  com.reason.gsny.Main - Starting Main on LAPTOP-BBG70CSE with PID 12140 (started by leon in D:\project\svn\甘肃农业灌溉\software\甘肃农业app\gsnyBoot)
+2020-06-24 23:57:53.663 [restartedMain] INFO  com.reason.gsny.Main - The following profiles are active: dev
+2020-06-24 23:57:53.771 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-24 23:57:53.772 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-24 23:57:55.776 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-06-24 23:57:55.971 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 180ms. Found 11 repository interfaces.
+2020-06-24 23:57:56.928 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2f9f570a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:57:57.010 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$c84d1f44] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:57:57.018 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:57:57.021 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@22669bc1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:57:57.026 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$ed21c1f6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:57:57.037 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration' of type [org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration$$EnhancerBySpringCGLIB$$1276da0c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:57:57.041 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jsr250MethodSecurityMetadataSource' of type [org.springframework.security.access.annotation.Jsr250MethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:57:57.043 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-24 23:57:57.884 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1978 (http)
+2020-06-24 23:57:57.907 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1978"]
+2020-06-24 23:57:57.922 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-06-24 23:57:57.922 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-06-24 23:57:58.331 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-06-24 23:57:58.332 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4560 ms
+2020-06-24 23:57:59.654 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-06-24 23:58:00.743 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-24 23:58:00.866 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-06-24 23:58:00.869 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-06-24 23:58:01.180 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-06-24 23:58:01.549 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2020-06-24 23:58:09.841 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-24 23:58:09.949 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-06-24 23:58:11.552 [restartedMain] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-06-24 23:58:12.992 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+2020-06-24 23:58:13.065 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60ec7439, org.springframework.security.web.context.SecurityContextPersistenceFilter@3d66add6, org.springframework.security.web.header.HeaderWriterFilter@73eeaa19, org.springframework.security.web.authentication.logout.LogoutFilter@2cd5fc6b, com.reason.gsny.handler.JwtRequestFilter@19c28161, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ea9b68c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1456f7c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@99544b1, org.springframework.security.web.session.SessionManagementFilter@799841c5, org.springframework.security.web.access.ExceptionTranslationFilter@6f237fd5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@796a0cb3]
+2020-06-24 23:58:13.113 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-06-24 23:58:13.350 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-24 23:58:13.635 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-06-24 23:58:14.056 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-06-24 23:58:14.092 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-06-24 23:58:14.148 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-06-24 23:58:14.436 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findUserGroupByAreaUsingGET_1
+2020-06-24 23:58:14.445 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getGprsListUsingGET_1
+2020-06-24 23:58:14.536 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getGprsListUsingGET_2
+2020-06-24 23:58:14.682 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: closeMeterUsingGET_1
+2020-06-24 23:58:14.693 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2020-06-24 23:58:14.696 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: openMeterUsingGET_1
+2020-06-24 23:58:14.699 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: showMetersUsingGET_1
+2020-06-24 23:58:14.721 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListByStatusUsingGET_1
+2020-06-24 23:58:14.730 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getListUsingGET_1
+2020-06-24 23:58:14.732 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: jsonUsingGET_1
+2020-06-24 23:58:14.740 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_1
+2020-06-24 23:58:14.774 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1978"]
+2020-06-24 23:58:14.825 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 1978 (http) with context path ''
+2020-06-24 23:58:14.831 [restartedMain] INFO  com.reason.gsny.Main - Started Main in 22.208 seconds (JVM running for 23.503)
+2020-06-24 23:58:28.647 [http-nio-1978-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-24 23:58:28.648 [http-nio-1978-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-06-24 23:58:28.671 [http-nio-1978-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 23 ms
+2020-06-24 23:58:28.824 [http-nio-1978-exec-2] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:58:48.700 [http-nio-1978-exec-3] INFO  com.reason.gsny.repository.UserDao - 从数据库中查询用户
+2020-06-24 23:58:50.730 [http-nio-1978-exec-3] INFO  c.r.gsny.repository.impl.SimpleJpaRepositoryImpl - 拷贝函数
+2020-06-24 23:59:12.417 [Thread-52] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-24 23:59:12.433 [Thread-52] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-24 23:59:12.452 [Thread-52] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

@@ -1,8 +1,12 @@
 package com.reason.gsny.entity;
 
 import lombok.*;
+import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.*;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
@@ -14,6 +18,7 @@ import java.sql.Timestamp;
 public class TableGprsEntity implements Serializable {
     @Id
     private Long imeiid;
+    @Range(min =1,max = 9999999999L,message = "必须为合法的数字")
     private long imei;
     private String imeiName;
     private String loginTime;

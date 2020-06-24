@@ -49,23 +49,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        //  允许所有用户访问"/"和"/index.html"
-        http.authorizeRequests()
-                .antMatchers("/", "/index.html","/api/v1/*","/api/v1/*/*", "/public/bg/*").permitAll()
-//                .anyRequest().authenticated()   // 其他地址的访问均需验证权限
-                .and()
-                .formLogin()
-                .loginPage("/login.html")   //  登录页
-                .failureUrl("/login-error.html").permitAll()
-                .and()
-                .logout()
-                .logoutSuccessUrl("/public/test/index.html");
-                ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry registry
-                        = http.authorizeRequests();
-                registry.requestMatchers(CorsUtils::isPreFlightRequest).permitAll();
-    }
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        //  允许所有用户访问"/"和"/index.html"
+//        http.authorizeRequests()
+//                .antMatchers("/", "/index.html","/api/v1/*","/api/v1/*/*", "/public/bg/*").permitAll()
+////                .anyRequest().authenticated()   // 其他地址的访问均需验证权限
+//                .and()
+//                .formLogin()
+//                .loginPage("/login.html")   //  登录页
+//                .failureUrl("/login-error.html").permitAll()
+//                .and()
+//                .logout()
+//                .logoutSuccessUrl("/public/test/index.html");
+//                ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry registry
+//                        = http.authorizeRequests();
+//                registry.requestMatchers(CorsUtils::isPreFlightRequest).permitAll();
+//    }
     @Bean
     /**
      * 重写authenticationManagerBean()
@@ -74,22 +74,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
-//    @Override
-//    protected void configure(HttpSecurity httpSecurity) throws Exception {
-//        httpSecurity.csrf().disable()
-//                .authorizeRequests().
-//                antMatchers("/api/v1/authenticate").permitAll().
-//                anyRequest().
-//                authenticated()
-//                .and().exceptionHandling()
-//                .and().sessionManagement()
-//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-//        /**
-//         * 将jwt加入过滤链
-//         */
-//        httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
-//
-//    }
+    @Override
+    protected void configure(HttpSecurity httpSecurity) throws Exception {
+        httpSecurity.csrf().disable()
+                .authorizeRequests().
+                antMatchers("/api/v1/authenticate").permitAll().
+                anyRequest().
+                authenticated()
+                .and().exceptionHandling()
+                .and().sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+        /**
+         * 将jwt加入过滤链
+         */
+        httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
+
+    }
 
     @Override
     public void configure(WebSecurity web) throws Exception {

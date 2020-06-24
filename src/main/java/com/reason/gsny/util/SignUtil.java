@@ -84,6 +84,7 @@ public class SignUtil {
      */
     private static List<String> sort(List<String> data) {
         Collections.sort(data, new Comparator<String>() {
+            @Override
             public int compare(String obj1, String obj2) {
                 return obj1.compareTo(obj2);
             }
@@ -103,7 +104,7 @@ public class SignUtil {
         String trade_type = "JSAPI";
         String openid = "owqLTwu7_WNfqlZjI7Qp2lb0hfjY";
 
-        SortedMap<String, String> map = new TreeMap<String, String>();
+        SortedMap<String, String> map = new TreeMap<>();
         map.put("appid", appid);
         map.put("mch_id", mch_id);
         map.put("attach", "支付测试");

@@ -334,13 +334,13 @@ public class StringUtils extends com.alibaba.druid.util.StringUtils {
                     padChars[i] = padChar;
                 }
 
-                return isLeft?new String(padChars) + str:str + new String(padChars);
+                return isLeft? (new String(padChars) + str): (str + new String(padChars));
             }
         }
     }
 
     public static void main(String[] args) {
-        System.out.println(padWithBytes("����ͨ��ͨ��Ϣ�������޹�˾���ڷֹ�˾", 60, ' ', "GBK", true) + "|");
+        System.out.println(padWithBytes("啊大大", 60, ' ', "GBK", true) + "|");
         System.out.println(padWithBytes("����ͨ��ͨ��Ϣ�������޹�˾����", 60, ' ', "GBK", true) + "|");
     }
 }

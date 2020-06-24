@@ -1,20 +1,15 @@
 package com.reason.gsny;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.reason.gsny.entity.SysUser;
 import com.reason.gsny.repository.impl.SimpleJpaRepositoryImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-import java.text.SimpleDateFormat;
 import java.util.Optional;
 
 /**

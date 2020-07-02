@@ -33,6 +33,8 @@ public class BgAreaDeviceService {
     public List<AreaDeviceGroup> findDeviceGroupByArea(){
         return bgAreaDeviceRepo.findDeviceGroupByArea();
     }
+
+
     public List<AreaDeviceGroup2> findDeviceByMonthAndDevice_type(long device_type){
         List<AreaDeviceGroup2> list =bgAreaDeviceRepo.findDeviceByMonthAndDevice_type(device_type);
         for (int i=0;i<list.size();i++){

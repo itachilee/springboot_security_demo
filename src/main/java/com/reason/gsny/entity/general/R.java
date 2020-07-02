@@ -1,5 +1,7 @@
 package com.reason.gsny.entity.general;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.util.HashMap;
@@ -9,11 +11,15 @@ import java.util.Map;
  * @author leon
  */
 @Data
+@ApiModel(value = "返回类")
 public class R {
+    @ApiModelProperty(value = "是否成功")
     private Boolean success;
 
+    @ApiModelProperty(value = "代码")
     private Integer code;
 
+    @ApiModelProperty(value = "信息")
     private String message;
 
     private Map<String, Object> data = new HashMap<>();

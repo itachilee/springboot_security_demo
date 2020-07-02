@@ -1,17 +1,13 @@
 package com.reason.gsny.service.bg;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.reason.gsny.entity.TableMeterEntity;
 import com.reason.gsny.entity.bg.BgAreaMeter;
-import com.reason.gsny.entity.dto.AreaMeter;
+import com.reason.gsny.entity.dto.AreaDeviceOnlineAndAll;
 import com.reason.gsny.repository.TableMeterRepo;
 import com.reason.gsny.repository.bg.BgAreaMeterRepo;
-import com.reason.gsny.util.DoubleSerialize;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,14 +35,14 @@ public class BgAreaMeterService {
      * 返回在线的阀控器比例
      * @return
      */
-    public AreaMeter findOnlineMeter(){
+    public AreaDeviceOnlineAndAll findOnlineMeter(){
         try{
-            long onlineMeters =bgAreaMeterRepo.count();
-            long allMeters=tableMeterRepo.count();
-            AreaMeter areaMeter=new AreaMeter();
-            areaMeter.setAll_meter(allMeters);
-            areaMeter.setOnline_meter(onlineMeters);
-            return areaMeter;
+            long online =bgAreaMeterRepo.count();
+            long all=tableMeterRepo.count();
+            AreaDeviceOnlineAndAll areaDeviceOnlineAndAll =new AreaDeviceOnlineAndAll();
+            areaDeviceOnlineAndAll.setAll(all);
+            areaDeviceOnlineAndAll.setOnline(online);
+            return areaDeviceOnlineAndAll;
                     //(Double.parseDouble(onlineMeters+"")/Double.parseDouble(allMeters+""))*100;
         }catch (Exception e){
             return null;

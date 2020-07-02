@@ -5,6 +5,7 @@
     |   |   |-- com
     |   |       |-- reason
     |   |           |-- gsny
+    |   |               |-- Algorithms.java
     |   |               |-- Main.java
     |   |               |-- ServletInitializer.java
     |   |               |-- api
@@ -12,23 +13,27 @@
     |   |               |   |-- GprsApi.java
     |   |               |   |-- MetersApi.java
     |   |               |   |-- OrderApi.java
+    |   |               |   |-- TestApi.java
     |   |               |   |-- TreeApi.java
     |   |               |   |-- bg
+    |   |               |       |-- BgAreaCollectorApi.java
     |   |               |       |-- BgAreaDeviceApi.java
     |   |               |       |-- BgAreaMeterApi.java
+    |   |               |       |-- BgAreaPaymentApi.java
     |   |               |       |-- BgAreaUserApi.java
+    |   |               |       |-- BgAreaWaterApi.java
+    |   |               |       |-- BgAreaWaterUsageAndPayAmountApi.java
     |   |               |       |-- BgAreaWaterUsageApi.java
-    |   |               |       |-- BgAreaWaterUsageTimeApi.java
-    |   |               |       |-- BgWaterWastedApi.java
+    |   |               |       |-- TableGprsHeartRecordApi.java
     |   |               |-- config
     |   |               |   |-- GlobalCorsConfig.java
     |   |               |   |-- JacksonConfig.java
+    |   |               |   |-- LocalDateTimeSerializerConfig.java
     |   |               |   |-- SecurityConfig.java
     |   |               |   |-- StaticResourceConfiguration.java
     |   |               |   |-- Swagger2.java
     |   |               |-- controller
     |   |               |   |-- BookController.java
-    |   |               |   |-- ErrorController.java
     |   |               |   |-- GprsController.java
     |   |               |   |-- IndexController.java
     |   |               |   |-- LoginController.java
@@ -81,25 +86,36 @@
     |   |               |   |-- TableUserTypeEntity.java
     |   |               |   |-- TableVillageEntity.java
     |   |               |   |-- TableWaterEntity.java
+    |   |               |   |-- Test.java
+    |   |               |   |-- TestDto.java
     |   |               |   |-- TreeEntity.java
     |   |               |   |-- User.java
     |   |               |   |-- bg
+    |   |               |   |   |-- BgAreaCollector.java
     |   |               |   |   |-- BgAreaDevice.java
+    |   |               |   |   |-- BgAreaGprs.java
     |   |               |   |   |-- BgAreaMeter.java
+    |   |               |   |   |-- BgAreaPayment.java
     |   |               |   |   |-- BgAreaUser.java
+    |   |               |   |   |-- BgAreaWater.java
     |   |               |   |   |-- BgAreaWaterUsage.java
-    |   |               |   |   |-- BgAreaWaterUsageTime.java
-    |   |               |   |   |-- BgWaterWasted.java
+    |   |               |   |   |-- BgAreaWaterUsageAndPayAmount.java
+    |   |               |   |   |-- TableGprsHeartRecord.java
     |   |               |   |-- dto
     |   |               |   |   |-- AreaDeviceGroup.java
     |   |               |   |   |-- AreaDeviceGroup2.java
-    |   |               |   |   |-- AreaMeter.java
+    |   |               |   |   |-- AreaDeviceOnlineAndAll.java
     |   |               |   |   |-- AreaUserGroup.java
     |   |               |   |   |-- AreaWaterUsage.java
     |   |               |   |   |-- AreaWaterUsage2.java
     |   |               |   |   |-- AreaWaterUsage3.java
     |   |               |   |   |-- AreaWaterUsage4.java
     |   |               |   |   |-- AreaWaterWasted.java
+    |   |               |   |-- general
+    |   |               |   |   |-- CMSException.java
+    |   |               |   |   |-- GlobalExceptionHandler.java
+    |   |               |   |   |-- R.java
+    |   |               |   |   |-- ResultCodeEnum.java
     |   |               |   |-- jwt
     |   |               |   |   |-- AuthenticationRequest.java
     |   |               |   |   |-- AuthenticationResponse.java
@@ -108,19 +124,25 @@
     |   |               |-- handler
     |   |               |   |-- JwtRequestFilter.java
     |   |               |-- repository
-    |   |               |   |-- GprsRepo.java
-    |   |               |   |-- MeterRepo.java
-    |   |               |   |-- OrderRepo.java
+    |   |               |   |-- TableCollectorRepo.java
+    |   |               |   |-- TableGprsRepo.java
     |   |               |   |-- TableMeterRepo.java
+    |   |               |   |-- TableOrderRepo.java
+    |   |               |   |-- TableWaterRepo.java
+    |   |               |   |-- TestRepo.java
     |   |               |   |-- UserDao.java
     |   |               |   |-- WaterRepo.java
     |   |               |   |-- bg
+    |   |               |   |   |-- BgAreaCollectorRepo.java
     |   |               |   |   |-- BgAreaDeviceRepo.java
+    |   |               |   |   |-- BgAreaGprsRepo.java
     |   |               |   |   |-- BgAreaMeterRepo.java
+    |   |               |   |   |-- BgAreaPaymentRepo.java
     |   |               |   |   |-- BgAreaUserRepo.java
+    |   |               |   |   |-- BgAreaWaterRepo.java
+    |   |               |   |   |-- BgAreaWaterUsageAndPayAmountRepo.java
     |   |               |   |   |-- BgAreaWaterUsageRepo.java
-    |   |               |   |   |-- BgAreaWaterUsageTimeRepo.java
-    |   |               |   |   |-- BgWaterWastedRepo.java
+    |   |               |   |   |-- TableGprsHeartRecordRepo.java
     |   |               |   |-- impl
     |   |               |       |-- SimpleJpaRepositoryImpl.java
     |   |               |-- service
@@ -130,11 +152,15 @@
     |   |               |   |-- TableMeterService.java
     |   |               |   |-- UserService.java
     |   |               |   |-- bg
+    |   |               |   |   |-- BgAreaCollectorService.java
     |   |               |   |   |-- BgAreaDeviceService.java
+    |   |               |   |   |-- BgAreaGprsService.java
     |   |               |   |   |-- BgAreaMeterService.java
+    |   |               |   |   |-- BgAreaPaymentService.java
     |   |               |   |   |-- BgAreaUserService.java
+    |   |               |   |   |-- BgAreaWaterService.java
+    |   |               |   |   |-- BgAreaWaterUsageAndPayAmountService.java
     |   |               |   |   |-- BgAreaWaterUsageService.java
-    |   |               |   |   |-- BgWaterWastedService.java
     |   |               |   |-- impl
     |   |               |       |-- UserServiceImpl.java
     |   |               |-- support
@@ -144,6 +170,7 @@
     |   |                   |-- ByteGroup.java
     |   |                   |-- ConfigUtil.java
     |   |                   |-- DoubleSerialize.java
+    |   |                   |-- ExceptionUtil.java
     |   |                   |-- HttpUtil.java
     |   |                   |-- JwtUtil.java
     |   |                   |-- MD5Util.java
@@ -163,6 +190,8 @@
     |       |-- application-dev.properties
     |       |-- application-prod.properties
     |       |-- application.yml
+    |       |-- config.properties
+    |       |-- logback-spring.xml
     |       |-- db
     |       |   |-- migration
     |       |-- public
@@ -411,3 +440,4 @@
                 |-- reason
                     |-- gsny
                         |-- GsnyApplicationTests.java
+                        |-- JPATest.java

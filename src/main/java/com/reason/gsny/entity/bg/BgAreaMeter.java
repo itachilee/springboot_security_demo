@@ -12,6 +12,8 @@ import java.io.Serializable;
 
 
 /**
+ * 获取在线的阀控器的数据
+ * 在近两个小时内report表中出现过的阀控器编号会被抽取到此表中
  * @author leon
  */
 @Data

@@ -1,0 +1,24 @@
+2020-06-29 13:00:13.310 [restartedMain] DEBUG com.reason.gsny.Main - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-06-29 13:00:16.117 [restartedMain] DEBUG com.reason.gsny.handler.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2020-06-29 13:06:18.036 [restartedMain] DEBUG com.reason.gsny.Main - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-06-29 13:06:20.084 [restartedMain] DEBUG com.reason.gsny.handler.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2020-06-29 13:07:04.677 [restartedMain] DEBUG com.reason.gsny.Main - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-06-29 13:07:06.691 [restartedMain] DEBUG com.reason.gsny.handler.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2020-06-29 13:08:26.624 [restartedMain] DEBUG com.reason.gsny.Main - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-06-29 13:08:28.606 [restartedMain] DEBUG com.reason.gsny.handler.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2020-06-29 13:14:23.310 [restartedMain] DEBUG com.reason.gsny.Main - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-06-29 13:14:25.351 [restartedMain] DEBUG com.reason.gsny.handler.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2020-06-29 13:27:24.760 [restartedMain] DEBUG com.reason.gsny.Main - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-06-29 13:27:26.800 [restartedMain] DEBUG com.reason.gsny.handler.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2020-06-29 13:41:08.309 [restartedMain] DEBUG com.reason.gsny.Main - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-06-29 13:41:10.369 [restartedMain] DEBUG com.reason.gsny.handler.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2020-06-29 13:50:34.562 [restartedMain] DEBUG com.reason.gsny.Main - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-06-29 13:50:36.699 [restartedMain] DEBUG com.reason.gsny.handler.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2020-06-29 13:53:19.481 [restartedMain] DEBUG com.reason.gsny.Main - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-06-29 13:53:21.494 [restartedMain] DEBUG com.reason.gsny.handler.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2020-06-29 14:03:33.479 [restartedMain] DEBUG com.reason.gsny.Main - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-06-29 14:03:35.658 [restartedMain] DEBUG com.reason.gsny.handler.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2020-06-29 14:04:14.653 [restartedMain] DEBUG com.reason.gsny.Main - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-06-29 14:04:16.706 [restartedMain] DEBUG com.reason.gsny.handler.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2020-06-29 15:03:21.058 [restartedMain] DEBUG com.reason.gsny.Main - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2020-06-29 15:03:23.499 [restartedMain] DEBUG com.reason.gsny.handler.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use

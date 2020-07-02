@@ -7,17 +7,14 @@ import com.reason.gsny.entity.TableMeterEntity;
 import com.reason.gsny.entity.TableToConcentratorEntity;
 import com.reason.gsny.entity.TableWaterEntity;
 import com.reason.gsny.entity.other.Io;
-import com.reason.gsny.repository.GprsRepo;
-import com.reason.gsny.repository.MeterRepo;
-import com.reason.gsny.repository.OrderRepo;
+import com.reason.gsny.repository.TableGprsRepo;
+import com.reason.gsny.repository.TableMeterRepo;
+import com.reason.gsny.repository.TableOrderRepo;
 import com.reason.gsny.repository.WaterRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * @author leon
@@ -26,24 +23,24 @@ import java.util.Date;
 @Service
 public class MetersService {
     @Autowired
-    private MeterRepo meterRepo;
+    private TableMeterRepo tableMeterRepo;
 
     @Autowired
     private WaterRepo waterRepo;
 
     @Autowired
-    private GprsRepo gprsRepo;
+    private TableGprsRepo tableGprsRepo;
     @Autowired
-    private OrderRepo orderRepo;
+    private TableOrderRepo tableOrderRepo;
     @Autowired
     private ObjectMapper mapper;
     public Iterable<TableMeterEntity> findAll(Pageable pageable){
-        return meterRepo.findAll(pageable);
+        return tableMeterRepo.findAll(pageable);
     }
 
 
     public Iterable<TableMeterEntity> findAllByImeiId(Pageable pageable, Long imei_id){
-        return meterRepo.findAllByImeiId(pageable,imei_id);
+        return tableMeterRepo.findAllByImeiId(pageable,imei_id);
     }
 
     /**
@@ -53,9 +50,9 @@ public class MetersService {
      * @throws JsonProcessingException
      */
     public long openMeter(Long meter_id) throws JsonProcessingException {
-        TableMeterEntity tableMeterEntity =meterRepo.findByMeterIDid(meter_id);
+        TableMeterEntity tableMeterEntity = tableMeterRepo.findByMeterIDid(meter_id);
         TableWaterEntity tableWaterEntity =waterRepo.findByMeterIDid(tableMeterEntity.getMeterIDid());
-        TableGprsEntity tableGprsEntity =gprsRepo.findByImeiid(tableMeterEntity.getImeiId());
+        TableGprsEntity tableGprsEntity = tableGprsRepo.findByImeiid(tableMeterEntity.getImeiId());
         Io io=new Io();
         io.setIO1(1);
         io.setIO2(1);
@@ -75,16 +72,16 @@ public class MetersService {
         toConcentratorEntity.setCmdInfo(mapper.writeValueAsString(io));
         toConcentratorEntity.setCmdCode("189");
         toConcentratorEntity.setCmdName("开泵");
-        orderRepo.save(toConcentratorEntity);
+        tableOrderRepo.save(toConcentratorEntity);
         Long sendId=toConcentratorEntity.getSendId();
 
         return sendId;
     }
 
     public long closeMeter(long id) throws JsonProcessingException {
-        TableMeterEntity tableMeterEntity =meterRepo.findByMeterIDid(id);
+        TableMeterEntity tableMeterEntity = tableMeterRepo.findByMeterIDid(id);
         TableWaterEntity tableWaterEntity =waterRepo.findByMeterIDid(tableMeterEntity.getMeterIDid());
-        TableGprsEntity tableGprsEntity =gprsRepo.findByImeiid(tableMeterEntity.getImeiId());
+        TableGprsEntity tableGprsEntity = tableGprsRepo.findByImeiid(tableMeterEntity.getImeiId());
         Io io=new Io();
 
         TableToConcentratorEntity toConcentratorEntity =new TableToConcentratorEntity();
@@ -101,7 +98,7 @@ public class MetersService {
 
         toConcentratorEntity.setCmdCode("189");
         toConcentratorEntity.setCmdInfo(mapper.writeValueAsString(io));
-        orderRepo.save(toConcentratorEntity);
+        tableOrderRepo.save(toConcentratorEntity);
         Long sendId =toConcentratorEntity.getSendId();
         return sendId;
     }

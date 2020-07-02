@@ -29,4 +29,7 @@ public class BgAreaUserService {
         return bgAreaUserRepo.findUserGroupByArea();
     }
 
+    public long findAllUserCount() {
+        return bgAreaUserRepo.count();
+    }
 }

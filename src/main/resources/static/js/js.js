@@ -18,6 +18,143 @@ $(function () {
     zb4();
     zb5();
     zb6();
+    // allWaterUsage();
+    allUserCount();
+    /**
+     * 动态增加table
+     */
+    createTable();
+
+    function createTable() {
+        const url = BaseUrl + '/api/bg/findWaterAndCostByArea';
+        /**
+         * 事件滚动列表
+         * @type {string}
+         */
+        const url2 = BaseUrl + '/api/bg/findAllHeartRecord';
+
+        $.ajax({
+            type: 'get',
+            url: url,
+            dataType: 'json',
+            success: function (data) {
+                toCreateTable(data);
+            }
+        });
+        $.ajax({
+            type: 'get',
+            url: url2,
+            dataType: 'json',
+            success: function (data) {
+                // toCreateTable(data);
+                console.log(data.data);
+                toCreateList(data.data);
+            }
+        });
+
+    }
+    function toCreateTable(data) {
+        // console.log(data);
+       for (let i=0;i<data.length;i++){
+           const table = document.getElementById("table1");
+           const row = document.createElement("tr");
+           const td1 = document.createElement("td");
+           // const span =document.createElement("span");
+           // span.innerHtml="7";
+           // td1.appendChild(span);
+           td1.innerHTML = "<span>"+(i+1)+"</span>";
+           const td2 = document.createElement("td");
+           td2.innerHTML = data[i].name;
+           const td3 = document.createElement("td");
+           td3.innerHTML = data[i].value;
+           const td4 = document.createElement("td");
+           td4.innerHTML = "0"+"%";
+               //"<a onclick='delete(this)'>删除</a>";
+           row.appendChild(td1);
+           row.appendChild(td2);
+           row.appendChild(td3);
+           row.appendChild(td4);
+           table.appendChild(row);
+           if (i>6){
+               break;
+           }
+       }
+    }
+    function toCreateList(data) {
+        console.log(data);
+        for (let i=0;i<data.item.length;i++){
+            const ul = document.getElementById("wrapUl");
+            const li=document.createElement("li");
+            const p =document.createElement("p");
+            const span1=document.createElement("span");
+            const span2=document.createElement("span");
+            const span3=document.createElement("span");
+            const span4=document.createElement("span");
+            span1.innerHTML=data.item[i].record_type_name;
+            span2.innerHTML="集中器";
+            span3.innerHTML=data.item[i].imei;
+            let off_line=2;
+            if (data.item[i].record_type===off_line){
+                span4.style.color="red";
+            }else {
+                span4.style.color="green";
+
+            }
+            span4.innerHTML=data.item[i].result_headling;
+
+            p.appendChild(span1);
+            p.appendChild(span2);
+            p.appendChild(span3);
+            p.appendChild(span4);
+            li.appendChild(p);
+            ul.appendChild(li);
+            if (i>15){
+                break;
+            }
+
+        }
+
+        $('.wrap,.adduser').liMarquee({
+            direction: 'up',/*身上滚动*/
+            runshort: false,/*内容不足时不滚动*/
+            scrollamount: 20/*速度*/
+        });
+    }
+    /**
+     * 总体用水情况总额
+     */
+    function allWaterUsage() {
+        const url = BaseUrl + '/api/bg/findAllWaterUsage';
+
+        $.ajax({
+            type: 'get',
+            url: url,
+            dataType: 'json',
+            success: function (data) {
+                // let waterUsage =data.
+                let allWaterUsage = document.getElementById('allWaterUsage')
+                allWaterUsage.innerText = data;
+            }
+        });
+    }
+
+    /**
+     * 更改用户统计数量显示
+     */
+    function allUserCount() {
+        const url = BaseUrl + '/api/bg/findAllUserCount';
+
+        $.ajax({
+            type: 'get',
+            url: url,
+            dataType: 'json',
+            success: function (data) {
+                // let waterUsage =data.
+                let allUserCount = document.getElementById('allUserCount')
+                allUserCount.innerText = data;
+            }
+        });
+    }
 
     // 区域用户数
     function echarts_1() {
@@ -1104,42 +1241,29 @@ $(function () {
      * 月用水量详情
      */
     function echarts_4() {
-        const url = BaseUrl + '/api/bg/findWaterAndCostByDate';
-        const getLoss =BaseUrl +'/api/bg/findWaterAndCostForLossRateGroupByMonth';
-
+        const url = BaseUrl + '/api/bg/findWaterUsageByDate';
+        const paymentUrl = BaseUrl + '/api/bg/findPaymentByDate';
+        const getLoss = BaseUrl + '/api/bg/findWaterAndCostForLossRateGroupByMonth';
         $.ajax({
             type: 'get',
-            url: getLoss,
+            url: paymentUrl,
             dataType: 'json',
+
             success: function (data) {
+                console.log(data);
                 const createData = function (month) {
                     return {
-                        "cost_amount": 0.00,
-                        "water_usage": 0.00,
-                        "area_guid": null,
-                        "area_name": null,
-                        "loss": 0.00,
-                        "month": month
+                        "year": 2020,
+                        "month": month,
+                        "cost_amount": 0,
+                        "water_usage": 0
                     }
                 };
-                const myData = Array.from({length: 12}, (item, index) => createData(index + 1));
-
-                for (let i = 0; i < data.length; i++) {
-                    myData[data[i].month - 1] = data[i];
+                const myData2 = Array.from({length: 12}, (item, index) => createData(index + 1));
+                const keys = Object.keys(data);
+                for (let i = 0; i < keys.length; i++) {
+                    myData2[data[i].month - 1] = data[i];
                 }
-                const lossData=[];
-                // 转换为百分数*100
-                for(let i=0;i<myData.length;i++){
-                    if(myData[i].water_usage!=0){
-                        myData[i].loss =(1-(myData[i].cost_amount/myData[i].water_usage))*100;
-                    }else{
-                        myData[i].loss =0;
-                    }
-                }
-                for (let i = 0; i < myData.length; i++) {
-                    lossData.push(myData[i].loss);
-                }
-                // console.log(lossData);
                 $.ajax({
                     type: 'get',
                     url: url,
@@ -1159,16 +1283,21 @@ $(function () {
                         };
                         const myData = Array.from({length: 12}, (item, index) => createData(index + 1));
                         const keys = Object.keys(data);
-
+                        const lossData = Array(12).fill(0);
                         for (let i = 0; i < keys.length; i++) {
                             myData[data[i].month - 1] = data[i];
                         }
                         for (let i = 0; i < myData.length; i++) {
-                            cost_amounts[i] = myData[i].cost_amount;
                             water_usages[i] = myData[i].water_usage;
+                            cost_amounts[i] = myData2[i].cost_amount;
                         }
-                        // console.log(lossData);
-                        // var lossData2 = [0, 20, 0, 2, 80, 100, 0, 0, 0, 0, 0, 0];
+                        for (let i = 0; i < 12; i++) {
+                            lossData[i] = water_usages[i] - cost_amounts[i];
+                        }
+                        // console.log(myData);
+                        // console.log(myData2);
+                        // console.log(water_usages);
+                        // console.log(cost_amounts);
                         // 基于准备好的dom，初始化echarts实例
                         const myChart = echarts.init(document.getElementById('echart4'));
                         let option = {
@@ -1183,7 +1312,7 @@ $(function () {
                             "legend": {
 
                                 "data": [
-                                    {"name": "用户购水(金额)"},
+                                    {"name": "用户购水(m³)"},
                                     {"name": "用户购水(用量)"},
                                     {"name": "损耗"}
                                 ],
@@ -1196,7 +1325,6 @@ $(function () {
                             "xAxis": [
                                 {
                                     "type": "category",
-
                                     data: xAxis,
                                     // ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
                                     axisLine: {lineStyle: {color: "rgba(255,255,255,.1)"}},
@@ -1209,7 +1337,7 @@ $(function () {
                             "yAxis": [
                                 {
                                     "type": "value",
-                                    "name": "金额",
+                                    "name": "购水量(m³)",
                                     "min": 0,
                                     "max": 10000,
                                     "interval": 1000,
@@ -1224,12 +1352,11 @@ $(function () {
                                     "type": "value",
                                     "name": "用水量",
                                     "min": 0,
-                                    "max": 5000,
-                                    "interval": 500,
+                                    "max": 10000,
+                                    "interval": 1000,
                                     "show": true,
                                     "axisLabel": {
                                         "show": true,
-
                                     },
                                     axisLine: {lineStyle: {color: 'rgba(255,255,255,.4)'}},//右线色
                                     splitLine: {show: true, lineStyle: {color: "#001e94"}},//x轴线
@@ -1238,8 +1365,8 @@ $(function () {
                                     "type": "value",
                                     "name": "损耗",
                                     "min": 0,
-                                    "max": 100,
-                                    "interval": 10,
+                                    "max": 10000,
+                                    "interval": 1000,
                                     "show": false,
                                     "axisLabel": {
                                         "show": false,
@@ -1257,7 +1384,7 @@ $(function () {
                             },
                             "series": [
                                 {
-                                    "name": "用户购水(金额)",
+                                    "name": "用户购水(m³)",
 
                                     "type": "bar",
                                     "data":
@@ -1327,8 +1454,8 @@ $(function () {
                                     "yAxisIndex": 2,
 
                                     "data":
-                                        lossData,
-                                        // [30, 24, 3, 34, 23, 6, 87, 44, 87, 35, 26, 96],
+                                    lossData,
+                                    // [30, 24, 3, 34, 23, 6, 87, 44, 87, 35, 26, 96],
                                     lineStyle: {
                                         normal: {
                                             width: 2
@@ -1355,7 +1482,9 @@ $(function () {
                     }
                 });
 
-            }});
+
+            }
+        });
 
 
     }
@@ -1377,8 +1506,8 @@ $(function () {
                 const cost_amounts = [];
                 for (let i = 0; i < data.length; i++) {
                     xAxis.push(data[i].area_name);
-                    used_waters.push(data[i].used_water);
-                    cost_amounts.push(data[i].cost_amount);
+                    used_waters.push(data[i].water_usage);
+                    cost_amounts.push(data[i].pay_amount);
                 }
                 const myChart = echarts.init(document.getElementById('echart5'));
                 let option = {
@@ -1393,7 +1522,7 @@ $(function () {
                     },
                     xAxis: {
                         min: 0,
-                        max: 100,
+                        max: 10000,
                         splitLine: {
                             show: false
                         },
@@ -1460,7 +1589,7 @@ $(function () {
                                 padding: 10,
                                 color: '#49bcf7',
                                 fontSize: 14,
-                                formatter: '{c}%'
+                                formatter: '{c}m³'
 
                             },
                             itemStyle: {
@@ -1506,8 +1635,8 @@ $(function () {
             success: function (data) {
                 // 基于准备好的dom，初始化echarts实例
                 const myChart = echarts.init(document.getElementById('zb4'));
-                const onlineMeter = data.online_meter;//在线数量
-                const allMeter = data.all_meter;
+                const onlineMeter = data.online;//在线数量
+                const allMeter = data.all;
                 const offlineMeter = allMeter - onlineMeter;//不在线数量
                 let option = {
                     series: [{
@@ -1568,124 +1697,145 @@ $(function () {
     }
 
     function zb5() {
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('zb5'));
-        var v1 = 54//在线数量
-        var v2 = 1//不在线数量
-        var v3 = v1 + v2//总数量
-        option = {
+        const url = BaseUrl + '/api/bg/findOnlineWater';
 
-//animation: false,
-            series: [{
-                type: 'pie',
-                radius: ['60%', '70%'],
-                color: '#cdba00',
-                label: {
-                    normal: {
-                        position: 'center'
-                    }
-                },
-                data: [{
-                    value: v1,
-                    name: '在线数量',
-                    label: {
-                        normal: {
-                            formatter: v3 + '',
-                            textStyle: {
-                                fontSize: 20,
-                                color: '#fff',
+        $.ajax({
+            type: 'get',
+            url: url,
+            dataType: 'json',
+            success: function (data) {
+                // 基于准备好的dom，初始化echarts实例
+                const myChart = echarts.init(document.getElementById('zb5'));
+                const onlineMeter = data.online;//在线数量
+                const allMeter = data.all;
+                const offlineMeter = allMeter - onlineMeter;//不在线数量
+                let option = {
+                    series: [{
+
+                        type: 'pie',
+                        radius: ['60%', '70%'],
+                        color: '#49bcf7',
+                        label: {
+                            normal: {
+                                position: 'center'
                             }
-                        }
-                    }
-                }, {
-                    value: v2,
-                    name: '不在线数量',
-                    label: {
-                        normal: {
-                            formatter: function (params) {
-                                return '在线' + Math.round(v1 / v3 * 100) + '%'
-                            },
-                            textStyle: {
-                                color: '#aaa',
-                                fontSize: 12
-                            }
-                        }
-                    },
-                    itemStyle: {
-                        normal: {
-                            color: 'rgba(255,255,255,.2)'
                         },
-                        emphasis: {
-                            color: '#fff'
-                        }
-                    },
-                }]
-            }]
-        };
-        myChart.setOption(option);
-        window.addEventListener("resize", function () {
-            myChart.resize();
+                        data: [{
+                            value: onlineMeter,
+                            name: '在线数量',
+                            label: {
+                                normal: {
+                                    formatter: allMeter + '',
+                                    textStyle: {
+                                        fontSize: 20,
+                                        color: '#fff',
+                                    }
+                                }
+                            }
+                        }, {
+                            value: offlineMeter,
+                            name: '不在线数量',
+                            label: {
+                                normal: {
+                                    formatter: function (params) {
+                                        return '在线' + Math.round(onlineMeter / allMeter * 100) + '%'
+                                    },
+                                    textStyle: {
+                                        color: '#aaa',
+                                        fontSize: 12
+                                    }
+                                }
+                            },
+                            itemStyle: {
+                                normal: {
+                                    color: 'rgba(255,255,255,.2)'
+                                },
+                                emphasis: {
+                                    color: '#fff'
+                                }
+                            },
+                        }]
+                    }]
+                };
+                myChart.setOption(option);
+                window.addEventListener("resize", function () {
+                    myChart.resize();
+                });
+            }
         });
+
     }
 
     function zb6() {
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('zb6'));
-        var v1 = 20//在线数量
-        var v2 = 0//不在线数量
-        var v3 = v1 + v2//总数量
-        option = {
-            series: [{
 
-                type: 'pie',
-                radius: ['60%', '70%'],
-                color: '#62c98d',
-                label: {
-                    normal: {
-                        position: 'center'
-                    }
-                },
-                data: [{
-                    value: v1,
-                    name: '在线数量',
-                    label: {
-                        normal: {
-                            formatter: v3 + '',
-                            textStyle: {
-                                fontSize: 20,
-                                color: '#fff',
+        const url = BaseUrl + '/api/v1/findOnlineGprs';
+
+        $.ajax({
+            type: 'get',
+            url: url,
+            dataType: 'json',
+            success: function (data) {
+                // 基于准备好的dom，初始化echarts实例
+                const myChart = echarts.init(document.getElementById('zb6'));
+                const onlineMeter = data.online;//在线数量
+                const allMeter = data.all;
+                const offlineMeter = allMeter - onlineMeter;//不在线数量
+                let option = {
+                    series: [{
+
+                        type: 'pie',
+                        radius: ['60%', '70%'],
+                        color: '#49bcf7',
+                        label: {
+                            normal: {
+                                position: 'center'
                             }
-                        }
-                    }
-                }, {
-                    value: v2,
-                    name: '不在线数量',
-                    label: {
-                        normal: {
-                            formatter: function (params) {
-                                return '在线' + Math.round(v1 / v3 * 100) + '%'
-                            },
-                            textStyle: {
-                                color: '#aaa',
-                                fontSize: 12
-                            }
-                        }
-                    },
-                    itemStyle: {
-                        normal: {
-                            color: 'rgba(255,255,255,.2)'
                         },
-                        emphasis: {
-                            color: '#fff'
-                        }
-                    },
-                }]
-            }]
-        };
-        myChart.setOption(option);
-        window.addEventListener("resize", function () {
-            myChart.resize();
+                        data: [{
+                            value: onlineMeter,
+                            name: '在线数量',
+                            label: {
+                                normal: {
+                                    formatter: allMeter + '',
+                                    textStyle: {
+                                        fontSize: 20,
+                                        color: '#fff',
+                                    }
+                                }
+                            }
+                        }, {
+                            value: offlineMeter,
+                            name: '不在线数量',
+                            label: {
+                                normal: {
+                                    formatter: function (params) {
+                                        return '在线' + Math.round(onlineMeter / allMeter * 100) + '%'
+                                    },
+                                    textStyle: {
+                                        color: '#aaa',
+                                        fontSize: 12
+                                    }
+                                }
+                            },
+                            itemStyle: {
+                                normal: {
+                                    color: 'rgba(255,255,255,.2)'
+                                },
+                                emphasis: {
+                                    color: '#fff'
+                                }
+                            },
+                        }]
+                    }]
+                };
+                myChart.setOption(option);
+                window.addEventListener("resize", function () {
+                    myChart.resize();
+                });
+            }
         });
+
+
     }
 
     /**
@@ -1701,12 +1851,11 @@ $(function () {
             success: function (data) {
                 // 基于准备好的dom，初始化echarts实例
                 const myChart = echarts.init(document.getElementById('zb1'));
-                const v2 = data[0].cost_amount;//本月用户用量
-                const v3 = data[0].water_usage;//总用量
+                const v2 = data.cost_amount;//本月用户用量
+                const v3 = data.water_usage;//总用量
                 const v1 = v3 - v2;//本月损耗
                 let option = {
                     series: [{
-
                         type: 'pie',
                         radius: ['60%', '70%'],
                         color: '#49bcf7',
@@ -1771,12 +1920,14 @@ $(function () {
             url: url,
             dataType: 'json',
             success: function (data) {
-
+                // console.log(data);
                 // 基于准备好的dom，初始化echarts实例
                 const myChart = echarts.init(document.getElementById('zb2'));
-                const v1 = 298//本年损耗
-                const v2 = 52300//本年用户用量
-                const v3 = v1 + v2//总用量
+
+                const v2 = data.cost_amount;//本年用户用量
+                const v3 = data.water_usage;//总用量
+                const v1 = v3 - v2;//本年损耗
+
                 let option = {
 
 //animation: false,
@@ -1836,7 +1987,7 @@ $(function () {
     }
 
     function zb3() {
-        const url = BaseUrl + '/api/bg/findWaterAndCostForLossRate';
+        const url = BaseUrl + '/api/bg/findAllWaterAndCostForLossRateByYear';
 
         $.ajax({
             type: 'get',
@@ -1846,9 +1997,12 @@ $(function () {
 
                 // 基于准备好的dom，初始化echarts实例
                 const myChart = echarts.init(document.getElementById('zb3'));
-                const v1 = 498//总损耗
-                const v2 = 92300//用用户用量
-                const v3 = v1 + v2//总用量
+
+                const v2 = data.cost_amount;//总用户用量
+                const v3 = data.water_usage;//总用量
+                let allWaterUsage = document.getElementById('allWaterUsage')
+                allWaterUsage.innerText = data.water_usage;
+                const v1 = v3 - v2;//总损耗
                 let option = {
                     series: [{
 

@@ -7,6 +7,7 @@ import com.reason.gsny.entity.dto.AreaWaterUsage3;
 import com.reason.gsny.entity.dto.AreaWaterUsage4;
 import com.reason.gsny.service.bg.BgAreaWaterUsageService;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +21,7 @@ import java.util.Map;
 /**
  * @author leon
  */
+@Slf4j
 @RestController
 @RequestMapping("/api/bg")
 public class BgAreaWaterUsageApi {
@@ -28,11 +30,11 @@ public class BgAreaWaterUsageApi {
     private BgAreaWaterUsageService bgAreaWaterUsageService;
 
     @ApiOperation(value="获取区域所有按年月分组的信息", notes="获取区域所有按年月分组的信息")
-    @GetMapping(value = "/findWaterAndCostByDate")
+    @GetMapping(value = "/findWaterUsageByDate")
     @ResponseStatus(HttpStatus.OK)
-    public List<AreaWaterUsage> findWaterAndCostByDate()
+    public List<AreaWaterUsage> findWaterUsageByDate()
     {
-        return bgAreaWaterUsageService.findWaterAndCostByDate();
+        return bgAreaWaterUsageService.findWaterUsageByDate();
     }
 
     @ApiOperation(value="获取区域当月用水与充值信息", notes="获取区域当月用水与充值信息")
@@ -49,6 +51,7 @@ public class BgAreaWaterUsageApi {
     {
         return bgAreaWaterUsageService.findWaterAndCostByArea();
     }
+
     @ApiOperation(value="按区域分组获取到每组的用水量並按分月進行分鐘", notes="按区域分组获取到每组的用水量並按分月進行分組")
     @GetMapping(value = "/findWaterAndCostByAreaGroupByMonth")
     @ResponseStatus(HttpStatus.OK)
@@ -65,6 +68,7 @@ public class BgAreaWaterUsageApi {
     {
         return  bgAreaWaterUsageService.findWaterAndCostByDay();
     }
+
     @ApiOperation(value="获取每月平均的用水量", notes="获取每月平均的用水量")
     @GetMapping(value = "/findWaterAndCostByMonth")
     @ResponseStatus(HttpStatus.OK)
@@ -80,6 +84,7 @@ public class BgAreaWaterUsageApi {
     {
         return bgAreaWaterUsageService.findWaterAndCostByHour();
     }
+
     @ApiOperation(value="获取所有的用水量与充值金额", notes="获取所有的用水量与充值金额")
     @GetMapping(value = "/findAllBgAreaWaterUsage")
     @ResponseStatus(HttpStatus.OK)
@@ -106,16 +111,31 @@ public class BgAreaWaterUsageApi {
     @ApiOperation(value="获取这个月充值金额与总用水量", notes="获取这个月充值金额与总用水量")
     @GetMapping(value = "/findWaterAndCostForLossRateByMonth")
     @ResponseStatus(HttpStatus.OK)
-    public List<AreaWaterUsage4> findWaterAndCostForLossRateByMonth(){
-
+    public AreaWaterUsage4 findWaterAndCostForLossRateByMonth(){
+        log.info(java.time.LocalDate.now().toString());
         return bgAreaWaterUsageService.findWaterAndCostForLossRateByMonth();
     }
-    @ApiOperation(value="获取当前年充值金额与总用水量", notes="获取当前年充值金额与总用水量")
+    @ApiOperation(value="本年损耗", notes="本年损耗")
     @GetMapping(value = "/findWaterAndCostForLossRateByYear")
     @ResponseStatus(HttpStatus.OK)
-    public List<AreaWaterUsage4> findWaterAndCostForLossRateByYear(){
+    public AreaWaterUsage4 findWaterAndCostForLossRateByYear(){
 
         return bgAreaWaterUsageService.findWaterAndCostForLossRateByYear();
+    }
+    @ApiOperation(value="全部损耗", notes="全部损耗")
+    @GetMapping(value = "/findAllWaterAndCostForLossRateByYear")
+    @ResponseStatus(HttpStatus.OK)
+    public AreaWaterUsage4 findAllWaterAndCostForLossRateByYear(){
+
+        return bgAreaWaterUsageService.findAllWaterAndCostForLossRateByYear();
+    }
+
+    @ApiOperation(value="查询所有的用水量总和", notes="查询所有的用水量总和")
+    @GetMapping(value = "/findAllWaterUsage")
+    @ResponseStatus(HttpStatus.OK)
+    public double findAllWaterUsage(){
+
+        return bgAreaWaterUsageService.findAllWaterUsage();
     }
 
 

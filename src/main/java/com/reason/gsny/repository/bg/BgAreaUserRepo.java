@@ -17,4 +17,8 @@ public interface BgAreaUserRepo extends JpaRepository<BgAreaUser,Long> {
      */
     @Query("SELECT new com.reason.gsny.entity.dto.AreaUserGroup(count(au),au.area_guid,au.area_name) from BgAreaUser au group by au.area_guid,au.area_name")
     List<AreaUserGroup> findUserGroupByArea();
+
+
+
+
 }

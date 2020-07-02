@@ -5,11 +5,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+/**
+ * @author leon
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class AreaMeter {
-    private long online_meter;
-    private long all_meter;
+public class AreaDeviceOnlineAndAll {
+    private long online;
+    private long all;
 }

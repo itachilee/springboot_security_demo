@@ -42,5 +42,12 @@ public class BgAreaUserApi {
         return lists;
     }
 
+    @ApiOperation(value="获取区域用户信息", notes="获取区域用户信息")
+    @GetMapping(value = "/findAllUserCount")
+    @ResponseStatus(HttpStatus.OK)
+    public long findAllUserCount()
+    {
+        return    bgAreaUserService.findAllUserCount();
+    }
 
 }

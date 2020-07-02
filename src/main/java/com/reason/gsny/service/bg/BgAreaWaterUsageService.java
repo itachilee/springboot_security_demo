@@ -5,6 +5,7 @@ import com.reason.gsny.entity.dto.AreaWaterUsage;
 import com.reason.gsny.entity.dto.AreaWaterUsage2;
 import com.reason.gsny.entity.dto.AreaWaterUsage3;
 import com.reason.gsny.entity.dto.AreaWaterUsage4;
+import com.reason.gsny.repository.bg.BgAreaPaymentRepo;
 import com.reason.gsny.repository.bg.BgAreaWaterUsageRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,13 +25,20 @@ public class BgAreaWaterUsageService {
     @Autowired
     private BgAreaWaterUsageRepo bgAreaWaterUsageRepo;
 
+
+    @Autowired
+    private BgAreaPaymentRepo bgAreaPaymentRepo;
     /**
-     * 获取区域所有按年月分组的信息
+     * 获取区域所有按年月分组的用水量信息
      * @return
      */
-    public List<AreaWaterUsage> findWaterAndCostByDate()
+    public List<AreaWaterUsage> findWaterUsageByDate()
     {
-        List<AreaWaterUsage> lists=  bgAreaWaterUsageRepo.findWaterAndCostByDate();
+
+        List<AreaWaterUsage> lists=  bgAreaWaterUsageRepo.findWaterUsageByDate();
+
+
+//        List<AreaWaterUsage> lists=  bgAreaPaymentRepo.findWaterAndCostByDate();
         return lists;
     }
 
@@ -81,6 +89,7 @@ public class BgAreaWaterUsageService {
     public List<AreaWaterUsage> findWaterAndCostByDay()
     {
         List<AreaWaterUsage> lists=  bgAreaWaterUsageRepo.findWaterAndCostByDay();
+        log.info("获取每天平均的用水量");
         return lists;
     }
 
@@ -146,18 +155,49 @@ public class BgAreaWaterUsageService {
         }
         return list;
     }
+    /**
+     * 查询所有的用水量总和
+     * @return double
+     */
+    public double findAllWaterUsage(){
+        return  bgAreaWaterUsageRepo.findAllWaterUsage();
+    }
+
+    /**
+     * 本月损耗
+     * @return
+     */
+    public AreaWaterUsage4 findWaterAndCostForLossRateByMonth(){
+
+        AreaWaterUsage4 areaWaterUsage3 =new AreaWaterUsage4();
+        areaWaterUsage3.setCost_amount(bgAreaPaymentRepo.findPaymentThisMonth().getCost_amount());
+        areaWaterUsage3.setWater_usage(bgAreaWaterUsageRepo.findWaterUsageThisMonth().getWater_usage());
+        return areaWaterUsage3;
+    }
 
 
     /**
-     * 查询本月的总用水量与总充值量
+     * 本年损耗
      * @return
      */
-    public List<AreaWaterUsage4> findWaterAndCostForLossRateByMonth(){
-        return bgAreaWaterUsageRepo.findWaterAndCostForLossRateByMonth();
-    }
-    public List<AreaWaterUsage4> findWaterAndCostForLossRateByYear(){
-        return bgAreaWaterUsageRepo.findWaterAndCostForLossRateByYear();
+    public AreaWaterUsage4 findWaterAndCostForLossRateByYear(){
+        AreaWaterUsage4 areaWaterUsage3 =new AreaWaterUsage4();
+        areaWaterUsage3.setCost_amount(bgAreaPaymentRepo.findPaymentThisYear().getCost_amount());
+        areaWaterUsage3.setWater_usage(bgAreaWaterUsageRepo.findWaterUsageThisYear().getWater_usage());
+        return areaWaterUsage3;
     }
 
+
+    /**
+     * 总损耗
+     * @return
+     */
+    public AreaWaterUsage4 findAllWaterAndCostForLossRateByYear(){
+
+        AreaWaterUsage4 areaWaterUsage3 =new AreaWaterUsage4();
+        areaWaterUsage3.setCost_amount(bgAreaPaymentRepo.findAllPayment());
+        areaWaterUsage3.setWater_usage(bgAreaWaterUsageRepo.findAllWaterUsage());
+        return areaWaterUsage3;
+    }
 
 }
